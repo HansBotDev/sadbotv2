@@ -1,4 +1,4 @@
-const donasi = () => {
+const donasi = (prefix) => {
 	return `╔════════════════════
 ║ *DONASI UNTUK SadBotz*
 ╠════════════════════
