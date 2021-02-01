@@ -134,14 +134,14 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '🌀 Sedang di Prosess 🌀',
-				wait2: '[❗] WAIT GANS',
-				wait3: '[❗] Sabar tod pasti kemren nih',
-				wait4: '[❗] Sabar dumlu yakan',
-				success: '✔️ Berhasil ✔️',
+				wait: '🌀 Sedang di Prosess ya ngentot 🌀',
+				wait2: '[❗] WAIT beban ortu',
+				wait3: '[❗] Sabar tod pasti kemren bamget nih',
+				wait4: '[❗] Sabar dumlu yakan yahahaha wahyu',
+				success: '✔️ Berhasil njr ✔️',
 				error: {
-					stick: '❌ Gagal, terjadi kesalahan saat mengkonversi gambar ke sticker ❌',
-					Iv: '❌ Link tidak valid ❌'
+					stick: '❌ Gagal, terjadi kesalahan saat mengkonversi gambar galer lu ke sticker ❌',
+					Iv: '❌ Link tidak valid njir ❌'
 				},
 				only: {
 					group: '❌ Perintah ini hanya bisa di gunakan dalam group! ❌',
@@ -153,7 +153,7 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6285559240360@s.whatsapp.net"] // Ganti pake nomor lu
+			const ownerNumber = ["6289610153337@s.whatsapp.net"] // Ganti pake nomor lu
 			const ramlanNumber = ["6285559240360@s.whatsapp.net"] // JANGAN DI UBAH NGENTOD
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
@@ -203,12 +203,12 @@ async function starts() {
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Nama bot* : ${me.name}\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
+					teks = `*WipspaaBot* : ${me.name}\n*+62 857-7448-9805* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
 				case 'blocklist':
-					teks = 'Daftar beban kontak :\n'
+					teks = 'Daftar beban kontak yang ga guna dan cuma nyampah :\n'
 					for (let block of blocked) {
 						teks += `~> @${block.split('@')[0]}\n`
 					}
@@ -218,7 +218,7 @@ async function starts() {
 				case 'owner':
                 case 'creator':
                   client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-               client.sendMessage(from, 'Nih nomor pacarku😍, ehh ownerku hehee😁 jangan di galakin ya:*',MessageType.text, { quoted: mek} )
+               client.sendMessage(from, 'Nih nomor yg buat bot, ownerku keren kan, jangan di chat kalo g penting ngentot',MessageType.text, { quoted: mek} )
                 break
 				case 'ocr':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
@@ -235,7 +235,7 @@ async function starts() {
 								fs.unlinkSync(media)
 							})
 					} else {
-						reply('Foto aja mas')
+						reply('Foto aja anjing')
 					}
 					break
 				case 'stiker':
@@ -277,7 +277,7 @@ async function starts() {
 								console.log(`Error : ${err}`)
 								fs.unlinkSync(media)
 								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(`❌ Gagal, pada saat mengkonversi ${tipe} ke stiker`)
+								reply(`❌ Gagal, pada saat mengkonversi njir ${tipe} ke stiker`)
 							})
 							.on('end', function () {
 								console.log('Finish')
@@ -298,7 +298,7 @@ async function starts() {
 							fs.unlinkSync(media)
 							let buffer = Buffer.from(res.base64img, 'base64')
 							fs.writeFileSync(ranp, buffer, (err) => {
-								if (err) return reply('Gagal, Terjadi kesalahan, silahkan coba beberapa saat lagi.')
+								if (err) return reply('Gagal, Terjadi kesalahan, silahkan coba bayar dulu biar berhasil.')
 							})
 							exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
 								fs.unlinkSync(ranp)
@@ -307,7 +307,7 @@ async function starts() {
 							})
 						})
 					} else {
-						reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim`)
+						reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim ngentot,jangan males scroll lu anjing`)
 					}
 					break
 				case 'tts':
@@ -465,7 +465,7 @@ async function starts() {
 					reply('Sukses delete all chat :)')
 					break
 				case 'bc':
-					if (!isOwner) return reply('Kamu siapa?')
+					if (!isOwner) return reply('Kamu siapa anjing?')
 					if (!isRamlan) return reply('Kamu Ramlan?')
 					if (args.length < 1) return reply('.......')
 					anu = await client.chats.all()
@@ -475,12 +475,12 @@ async function starts() {
 						for (let _ of anu) {
 							client.sendMessage(_.jid, buff, image, {caption: `⟪ *${Botz}* 𝑩𝑹𝑶𝑨𝑫𝑪𝑨𝑺𝑻 ⟫\n\n${body.slice(4)}`})
 						}
-						reply('Suksess broadcast')
+						reply('Suksess broadcast,mantap lah anying')
 					} else {
 						for (let _ of anu) {
 							sendMess(_.jid, `⟪ *${Botz}* 𝑩𝑹𝑶𝑨𝑫𝑪𝑨𝑺𝑻 ⟫\n\n${body.slice(4)}`)
 						}
-						reply('Suksess broadcast')
+						reply('Suksess broadcast,mantap lah anying')
 					}
 					break
                                 case 'promote':
@@ -490,7 +490,7 @@ async function starts() {
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Berhasil Promote\n'
+						teks = 'admin hasil ngemis jangan sok keras\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
@@ -508,7 +508,7 @@ async function starts() {
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Berhasil Demote\n'
+						teks = 'jiahaha bukan admin lagi si anjing\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
@@ -530,7 +530,7 @@ async function starts() {
 						client.groupAdd(from, [num])
 					} catch (e) {
 						console.log('Error :', e)
-						reply('Gagal menambahkan target, mungkin karena di private')
+						reply('Gagal menambahkan target, mungkin karena di private sama doi')
 					}
 					break
 				case 'kick':
@@ -540,7 +540,7 @@ async function starts() {
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Perintah di terima, mengeluarkan :\n'
+						teks = 'Perintah di terima, mengeluarkan beban ortu :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
@@ -682,7 +682,7 @@ async function starts() {
 					//GABUT
 					case 'apakah':
 					apakah = body.slice(1)
-					const apa =['Iya','Tidak','Bisa Jadi','Coba Ulangi']
+					const apa =['Iya kali','Tidak bisa ngejawab, gw bot ngentot','Bisa Jadi awokawok','Coba Ulangi,ketikan lu kagak jelas asli dah']
 					const kah = apa[Math.floor(Math.random() * apa.length)]
 					client.sendMessage(from, 'Pertanyaan : *'+apakah+'*\n\nJawaban : '+ kah, text, { quoted: mek })
 					break
@@ -700,13 +700,13 @@ async function starts() {
 					break
 				case 'hobby':
 					hobby = body.slice(1)
-					const hob =['Memasak','Membantu Atok','Mabar','Nobar','Sosmedtan','Membantu Orang lain','Nonton Anime','Nonton Drakor','Naik Motor','Nyanyi','Menari','Bertumbuk','Menggambar','Foto fotoan Ga jelas','Maen Game','Berbicara Sendiri']
+					const hob =['Memasak','Membantu ibu tiri','Mabar','Nobar','Sosmedtan','Membantu Orang lain','Nonton Anime','Nonton Drakor','Naik Motor','Nyanyi','Menari','Bertumbuk','Menggambar','Foto fotoan Ga jelas','Maen Game','Berbicara Sendiri']
 					const by = hob[Math.floor(Math.random() * hob.length)]
 					client.sendMessage(from, 'Pertanyaan : *'+hobby+'*\n\nJawaban : '+ by, text, { quoted: mek })
 					break
 				case 'bisakah':
 					bisakah = body.slice(1)
-					const bisa =['Bisa','Tidak Bisa','Coba Ulangi']
+					const bisa =['Bisa anjing, nanya terus kontol','kagak njir, lu kan males','Coba Ulangi']
 					const keh = bisa[Math.floor(Math.random() * bisa.length)]
 					client.sendMessage(from, 'Pertanyaan : *'+bisakah+'*\n\nJawaban : '+ keh, text, { quoted: mek })
 					break
